@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='main',
     version='0.1',
-    py_modules=['main', 'core'],
+    py_modules=['main'],
     install_requires=[
         'click'
     ],
