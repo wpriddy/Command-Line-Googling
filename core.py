@@ -3,17 +3,15 @@
 import webbrowser as web
 import requests
 
-def search_google(text: str) -> 'urllink':
+def search_google(text: str) -> 'Google search':
 
-    with requests.session() as c:
+    url = 'https://www.google.com/search'
 
-        url = 'https://www.google.com/search'
+    query = {'q': text}
 
-        query = {'q': text}
+    urllink = requests.get(url, params=query)
 
-        urllink = requests.get(url, params=query)
-
-        return urllink.url
+    return urllink.url
 
 
 def google(text: str) -> "search results":
